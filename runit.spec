@@ -28,7 +28,9 @@ Obsoletes: runit <= %{version}-%{release}
 Provides: runit = %{version}-%{release}
 
 BuildRequires: make gcc
-%{?el6:BuildRequires:        glibc-static}
+%if 0%{?fedora} >= 19 || 0%{?rhel} >= 6
+BuildRequires: glibc-static
+%endif
 %{?_with_dietlibc:BuildRequires:        dietlibc}
 
 Summary:        A UNIX init scheme with service supervision
