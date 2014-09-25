@@ -1,5 +1,5 @@
 #
-# spec file for package runit (Version 2.1.1)
+# spec file for package runit (Version 2.1.2)
 #
 # Copyright (c) 2010 Ian Meyer <ianmmeyer@gmail.com>
 
@@ -7,8 +7,8 @@
 ## --with dietlibc ...  statically links against dietlibc
 
 Name:           runit
-Version:        2.1.1
-Release:        6%{?_with_dietlibc:diet}%{?dist}
+Version:        2.1.2
+Release:        1%{?_with_dietlibc:diet}%{?dist}
 
 Group:          System/Base
 License:        BSD
@@ -143,6 +143,9 @@ fi
 %dir /etc/service
 
 %changelog
+* Thu Sep 25 2014 Alan Grosskurth <code@alan.grosskurth.ca> 2.1.2-1
+- Updated to version 2.1.2
+
 * Fri Jan 20 2012 Joe Miller <joeym@joeym.net> 2.1.1-6
 - modified spec to build on centos-5 (by only requiring glibc-static on centos-6)
 
